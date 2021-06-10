@@ -3,7 +3,7 @@
 namespace Modules\CoreModule\Http\Controllers\Fee;
 
 use App\Http\Controllers\Controller;
-use App\Models\Country;
+use Modules\CoreModule\Entities\Country;
 use App\Traits\ApprovellTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;

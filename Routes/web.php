@@ -1,10 +1,13 @@
 <?php
+
+
 use Illuminate\Support\Facades\Route;
 use Modules\CoreModule\Entities\ExchangeRate;
 use Modules\CoreModule\Http\Controllers\ExchangeRateController;
 use Modules\CoreModule\Http\Controllers\Fee\DepositFeeController;
 use Modules\CoreModule\Http\Controllers\Fee\FeeController;
 use Modules\CoreModule\Http\Controllers\Fee\WithdrawFeeController;
+use Modules\CoreModule\Http\Controllers\Notification\NotificationController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,18 +44,6 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
         Route::get('/fees/destroy/{id}',[WithdrawFeeController::class,'destroy'])->name('fees.destroy');
     });
 
-
-
-
-    // /* Withdraw Fee */
-    // Route::get('/withdraw/fees','BackEnd\WithdrawFeeController@index')->name('admin.withdraw.fees');
-    // Route::POST('/withdraw/fees/store','BackEnd\WithdrawFeeController@store')->name('admin.withdraw.fees.store');
-    // Route::get('/withdraw/fees/edit/{id}','BackEnd\WithdrawFeeController@edit')->name('admin.withdraw.fees.edit');
-    // Route::any('/withdraw/fees/update/{id}','BackEnd\WithdrawFeeController@update')->name('admin.withdraw.fees.update');
-    // Route::get('/withdraw/fees/destroy/{id}','BackEnd\WithdrawFeeController@destroy')->name('admin.withdraw.fees.destroy');
-
-
-
     Route::name('admin.')->prefix('exchange-rates')->group(function () {
         Route::get('/',[ExchangeRateController::class,'index'])->name('exchange.rates');
         Route::get('/store',[ExchangeRateController::class,'store'])->name('exchange.rates.store');
@@ -61,4 +52,8 @@ Route::group(['middleware' => ['auth','isAdmin']], function() {
         Route::PATCH('/update/{id}',[ExchangeRateController::class,'update'])->name('exchange-rates.update');
     });
 });
+
+/* Notifications */
+Route::get('notifications', [NotificationController::class,'index'])->name('notifications');
+Route::post('notification/read', [NotificationController::class,'readNotification'])->name('read.notification');
 

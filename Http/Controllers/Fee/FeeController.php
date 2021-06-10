@@ -2,9 +2,9 @@
 
 namespace Modules\CoreModule\Http\Controllers\Fee;
 
-use App\Models\Country;
+use Modules\CoreModule\Entities\Country;
 use Modules\PaymentMethodeModule\Entities\PaymentMethod;
-use App\Models\TransactionType;
+use Modules\TransactionModule\Entities\TransactionType;
 use App\Traits\ApprovellTrait;
 use App\Traits\CountryTrait;
 use Illuminate\Http\Request;

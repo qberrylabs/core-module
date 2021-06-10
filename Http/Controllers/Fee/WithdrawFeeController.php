@@ -3,7 +3,7 @@
 namespace Modules\CoreModule\Http\Controllers\Fee;
 
 use App\Http\Controllers\Controller;
-use App\Models\Country;
+use Modules\CoreModule\Entities\Country;
 use App\Traits\ApprovellTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
@@ -99,7 +99,7 @@ class WithdrawFeeController extends Controller
         if ($validator->fails()) {
             return back()->withErrors($validator)->withInput();
         }
-        
+
         $fee = WithdrawFee::find($id);
         if (!$fee) {
             return redirect()->route('admin.withdraw.fees')->with('failed','record not exists');

@@ -2,12 +2,12 @@
 
 namespace Modules\CoreModule\Http\Controllers;
 
-use App\Models\Country;
+use Modules\CoreModule\Entities\Country;
 use Modules\PaymentMethodeModule\Entities\PaymentMethod;
-use App\Models\TransactionType;
+use Modules\TransactionModule\Entities\TransactionType;
 use Illuminate\Contracts\Support\Renderable;
 use Illuminate\Http\Request;
-use Illuminate\Routing\Controller;
+use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 use Modules\CoreModule\Enum\FeeTypesEnum;
 

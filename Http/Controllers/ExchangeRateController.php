@@ -2,7 +2,7 @@
 
 namespace Modules\CoreModule\Http\Controllers;
 
-use App\Models\Country;
+use Modules\CoreModule\Entities\Country;
 use App\Services\ApproveService;
 use App\Traits\ApprovellTrait;
 use Illuminate\Contracts\Support\Renderable;
