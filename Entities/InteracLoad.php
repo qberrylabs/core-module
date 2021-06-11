@@ -14,4 +14,6 @@ class InteracLoad extends Model
 
     protected $guarded = [];
 
+    
+
 }
