@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Template extends Model
 {
     use ClearsResponseCache;
+    protected $fillable = [
+        'content','name','subject'
+    ];
 }
