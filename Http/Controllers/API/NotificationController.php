@@ -89,10 +89,10 @@ class NotificationController extends Controller
     public function createFirebaseNotification(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'user_id' => 'required',
-            'title' => 'required',
-            'type' => 'required',
-            'body' => 'required',
+            'user_id'   => 'required',
+            'title'     => 'required',
+            'type'      => 'required',
+            'body'      => 'required',
         ]);
 
         if ($validator->fails()) {
