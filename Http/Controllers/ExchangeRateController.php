@@ -20,6 +20,7 @@ class ExchangeRateController extends Controller
      */
     public function index()
     {
+       
         $exchangeRates=ExchangeRate::orderBy('created_at','DESC')->get();
         $countries=Country::where('is_active','1')->get();
         return view('coremodule::exchange_rates.index',compact('exchangeRates','countries'));

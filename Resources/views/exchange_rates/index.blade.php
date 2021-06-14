@@ -1,6 +1,6 @@
 @extends('layouts.table_layout',['titel'=>'Foreign Exchange'])
 @section('table')
-@include('backend.exchange_rates.create')
+@include('coremodule::exchange_rates.create')
 <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
     <thead>
         <tr>
