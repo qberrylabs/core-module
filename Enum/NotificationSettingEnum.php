@@ -5,5 +5,5 @@ namespace Modules\CoreModule\Enum;
 
 class NotificationSettingEnum
 {
-    const SERVER_API_KEY = 'AAAAjYYkNjo:APA91bH5hFC9KqP37q-8DepAxc0U9inBPjrU_aeoa5mFxGnm3rbohc15jJNdLDLpds2PBGJOEPurs0knmHDQlOrhwa_isfq6pYiUyJ-Aod84ct8XZBhfxdJf4RAeLWVR89Ubf1Km4seV';
+    const SERVER_API_KEY = 'AAAAlKFvS-M:APA91bHYetqVnD63hoctPYkJLRC9xFB88-llngwHUhX60ACDdoRWP2IDs8t6GVhSuILlRpuO_k4lP0f2y_A8dY3NiVqbbvjVLPt7JzHZ3HzH5Q2PxttyRGjvOZW1ixV98dwjkmsbf-Id';
 }
