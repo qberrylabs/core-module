@@ -4,12 +4,11 @@ namespace Modules\CoreModule\Entities;
 use Modules\TransactionModule\Entities\Transaction;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
-use App\Traits\ClearsResponseCache;
+
 use Illuminate\Database\Eloquent\Model;
 
 class Wallet extends Model
 {
-    use ClearsResponseCache;
     protected $fillable = [
         'user_id', 'name', 'currency'
     ];
